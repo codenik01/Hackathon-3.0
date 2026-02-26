@@ -5,7 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import { Play, Lock, Star, CheckCircle, Code, Terminal, Cpu, Database, Coffee, Globe, Sparkles, Flame, Trophy, Map, User, ChevronRight, BookOpen, ArrowLeft } from 'lucide-react';
 import QuizGenerator from '../components/QuizGenerator';
-import PracticeLeaderboard from '../components/PracticeLeaderboard';
+
 import { questTopics } from '../data/advancedQuestions';
 
 // Quests Data (Visual Metadata)
@@ -66,22 +66,15 @@ const Practice = () => {
                             <ArrowLeft size={20} />
                         </button>
                     )}
-                    <div className="flex items-center gap-2 text-orange-500 font-bold bg-orange-500/10 px-4 py-2 rounded-xl border border-orange-500/20">
-                        <Flame fill="currentColor" size={20} className="animate-pulse" />
-                        <span className="hidden sm:inline">{localStorage.getItem('user_streak') || 0} Day Streak</span>
-                        <span className="sm:hidden">{localStorage.getItem('user_streak') || 0}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-yellow-500 font-bold bg-yellow-500/10 px-4 py-2 rounded-xl border border-yellow-500/20">
-                        <Trophy fill="currentColor" size={20} />
-                        <span className="hidden sm:inline">{localStorage.getItem('user_xp') || 0} XP</span>
-                        <span className="sm:hidden">{localStorage.getItem('user_xp') || 0}</span>
-                    </div>
+                   <div>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                   </div>
                 </div>
 
                 {/* Desktop Nav Tabs */}
                 <div className="hidden md:flex items-center gap-2">
                     <button onClick={() => setView('path')} className={`px-4 py-2 rounded-xl font-bold transition-all ${['path', 'topics', 'quiz'].includes(view) ? (isDark ? 'bg-white/10 text-white' : 'bg-slate-200 text-slate-900') : 'text-slate-500 hover:text-slate-400'}`}>{t('Map')}</button>
-                    <button onClick={() => setView('leaderboard')} className={`px-4 py-2 rounded-xl font-bold transition-all ${view === 'leaderboard' ? (isDark ? 'bg-white/10 text-white' : 'bg-slate-200 text-slate-900') : 'text-slate-500 hover:text-slate-400'}`}>{t('Leaderboard')}</button>
+                   
                 </div>
             </div>
 

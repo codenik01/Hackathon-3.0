@@ -5,7 +5,7 @@ import { BookOpen, MessageCircleQuestion, ArrowRight, CheckCircle, Terminal, Cpu
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 // Import extracted components
-import GoalsSection from '../components/GoalsSection';
+
 import SkillPrintSection from '../components/SkillPrintSection';
 
 const Home = () => {
@@ -60,13 +60,7 @@ const Home = () => {
                             {t("Ask AI")} <MessageCircleQuestion size={20} className="text-indigo-400 group-hover:text-white transition-colors" />
                         </Link>
 
-                        {/* Goals Button */}
-                        <button
-                            onClick={() => setShowGoals(true)}
-                            className="btn btn-secondary group border-pink-500/20 hover:border-pink-500/50 hover:bg-pink-500/10 w-full md:w-auto"
-                        >
-                            {t("Set Goals")} <Target size={20} className="text-pink-400 group-hover:scale-110 transition-transform" />
-                        </button>
+                        
 
 
 
